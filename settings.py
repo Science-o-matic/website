@@ -57,10 +57,6 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(os.path.abspath(os.path.dirname(__file__)), "static/"),
-)
-
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '0r6%7gip5tmez*vygfv+u14h@4lbt^8e2^26o#5_f_#b7%cm)u'
@@ -149,6 +145,14 @@ INSTALLED_APPS = (
     'django_extensions',
 )
 
+
+LOGFILE = os.path.join(PROJECT_DIR, "logfile.log")
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -173,15 +177,21 @@ LOGGING = {
         'logfile': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': PROJECT_DIR + "/logfile.log",
+            'filename': LOGFILE,
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'verbose',
         },
         'mail_admins': {
             'level': 'ERROR',
+            'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
         }
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+            }
     },
     'loggers': {
         'django': {
@@ -196,8 +206,3 @@ LOGGING = {
         },
     }
 }
-
-try:
-    from local_settings import *
-except ImportError:
-    pass
