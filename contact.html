@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="img/favicon.png" />
+        <title>Science-o'Matic</title>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="js/action.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/reseter.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body class="contact">
+        <header>
+            <nav id="desktop">
+                <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#" class="logo"><img src="img/logo.png"/></a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                </ul>
+                <div id="languages">
+                    <a class="selected">EN</a> / <a href="#">ES</a>
+                </div>
+            </nav>
+            <nav id="menu-mobile">
+                <div id="navMobile">
+                    <a href="#" class="logo"><img src="img/logo.png"/></a>
+                    <button id="mobile-menu-button"><img src="img/mobile-menu_icon.png" /></a>
+                </div>
+                <ul>
+                    <a href="#"><li>HOME</li></a>
+                    <a href="#"><li>ABOUT US</li></a>
+                    <a href="#"><li>PROJECTS</li></a>
+                    <a href="#"><li>CONTACT US</li></a>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <h1>Contact Us</h1>
+                <p>Cras pretium eleifend luctus. Integer pretium at metus id dictum.
+                Pellentesque et pellentesque elit, sit amet dapibus justo.
+                Sed feugiat dictum purus et commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                Ut dictum augue quis magna lacinia, varius gravida eros varius.
+                Curabitur sit amet elementum sem, eu elementum ipsum. Vivamus sagittis orci sem, non vehicula nisl eleifend at.
+                Sed ac consectetur arcu. Suspendisse vitae leo a urna eleifend blandit quis eget ante. Ut interdum rhoncus est sed cursus.</p>
+                <form>
+                    <div class="block left">
+                        <label for="email">E-mail</label>
+                        <br/>
+                        <input type="text" name="email" title="email"/>
+                    </div>
+                    <div class="block right">
+                        <label for="Name">Name</label>
+                        <br/>
+                        <input type="text" name="name" title="name"/>
+                    </div>
+                    
+                    <div class="wide">
+                        <label for="address">Address</label>
+                        <br/>
+                        <input type="text" name="address" title="address"/>
+                    </div>
+                    
+                    <div class="block left">
+                        <label for="contact_reason">Contact Reason</label>
+                        <br/>
+                        <select name="contact_reason" title="contact_reason">
+                            <option>Job Contact</option>
+                            <option>Technical Support</option>
+                        </select>
+                    </div>
+                    <div class="block right">
+                        <label for="business_type">Business Type</label>
+                        <br/>
+                        <select name="business_type" title="business_type">
+                            <option>Communication - Entertainment</option>
+                            <option>Customer service</option>
+                        </select>
+                    </div>
+        
+                    <div class="block left">
+                        <label for="sex">Sex</label>
+                        <br/>
+                        <input type="radio" name="sex" value="male">Male<br>
+                        <input type="radio" name="sex" value="female">Female
+                    </div>
+                    <div class="block right">
+                        <label for="find_us">How did you find us?</label>
+                        <br/>
+                        <input type="checkbox" name="find_us" value="google">Google<br/>
+                        <input type="checkbox" name="find_us" value="tv_ads">TV ads<br/>
+                        <input type="checkbox" name="find_us" value="friend">Friend (recommendation)<br/>
+                    </div>
+        
+                    <div class="wide">
+                        <label for="comments">Comments</label>
+                        <textarea class="comments" name="comments" title="comments">
+                            
+                        </textarea>
+                    </div>
+                    
+                    <input type="checkbox"/>
+                    <span>He leído y acepto la <a href="#">Política de Privacidad</a> y los <a href="#">Términos y Condiciones</a></span>
+                    <br/>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </article>
+        </section>
+        <footer>
+            <div class="navigation">
+                <section>
+                    <div class="footerLogo"><img src="img/logoFooter.png"/></div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+            <div class="socialNetworks">
+                <section>
+                    <span>Follow us on:</span>
+                    <ul>
+                        <li><a href="#" class="button facebook"></a></li>
+                        <li><a href="#" class="button twitter"></a></li>
+                        <li><a href="#" class="button linkedin"></a></li>
+                        <li><a href="#" class="button google"></a></li>
+                        <li><a href="#" class="button rss"></a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>
