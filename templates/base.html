@@ -6,18 +6,17 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="img/favicon.png" />
   <title>{{ request.current_page.get_title }}</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
 
   {% render_block "css" %}
 
   {% addtoblock "css" %}
-   <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
-   <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
-   <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/reseter.css" />
+   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" />
   {% endaddtoblock %}
   <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
   {% addtoblock "js" %}
@@ -26,18 +25,70 @@
   {% endaddtoblock %}
 </head>
 
-<body>
+<body class="home">
   <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
   <![endif]-->
 
 {% cms_toolbar %}
-
+<header>
+  <nav id="desktop">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT US</a></li>
+      <li><a href="#" class="logo"><img src="img/logo.png"/></a></li>
+      <li><a href="#">PROJECTS</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+    <div id="languages">
+      <a class="selected">EN</a> / <a href="#">ES</a>
+    </div>
+  </nav>
+  <nav id="menu-mobile">
+    <div id="navMobile">
+      <a href="#" class="logo"><img src="img/logo.png"/></a>
+      <button id="mobile-menu-button"><img src="img/mobile-menu_icon.png" /></a>
+    </div>
+    <ul>
+      <a href="#"><li>HOME</li></a>
+      <a href="#"><li>ABOUT US</li></a>
+      <a href="#"><li>PROJECTS</li></a>
+      <a href="#"><li>CONTACT US</li></a>
+    </ul>
+  </nav>
+</header>
 {% block base_content %}
 {% endblock %}
 
 {% render_block "js" %}
-
+<footer>
+  <div class="navigation">
+    <section>
+      <div class="footerLogo"><img src="img/logoFooter.png"/></div>
+      <nav>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+  <div class="socialNetworks">
+    <section>
+      <span>Follow us on:</span>
+      <ul>
+        <li><a href="#" class="button facebook"></a></li>
+        <li><a href="#" class="button twitter"></a></li>
+        <li><a href="#" class="button linkedin"></a></li>
+        <li><a href="#" class="button google"></a></li>
+        <li><a href="#" class="button rss"></a></li>
+      </ul>
+    </section>
+  </div>
+</footer>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

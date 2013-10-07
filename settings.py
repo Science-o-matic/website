@@ -96,13 +96,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 CMS_TEMPLATES = (
-    ('sample.html', 'Sample Template'),
+    ('home.html', 'Home Template'),
 )
 
 # i18n and l10n
 CMS_HIDE_UNTRANSLATED = True
 LANGUAGES = (
     ('en', gettext('English')),
+    ('es', gettext('Spanish')),
 )
 DEFAULT_LANGUAGE = 0
 
