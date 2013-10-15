@@ -9,7 +9,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Admin', '<admin-email>')
+    ('Antonio Barcia', 'antonio.barcia@gmail.com')
 )
 
 MANAGERS = ADMINS
