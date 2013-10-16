@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+{% load sekizai_tags %}
+
+{% addtoblock "js" %}
+  <script type="text/javascript">
+    $(window).ready(function(){
+    $('.bxslider').bxSlider({
+    adaptiveHeight: true,
+                    auto: true,
+    autoStart: true,
+    pause: 5000
+    })
+            });
+  </script>
+{% endaddtoblock %}
+
 {% block base_content %}
 <section class="slides">
   <ul class="bxslider">
@@ -20,27 +35,29 @@
     </li>
   </ul>
 </section>
+<!-- TODO Fill this
 <section class="work">
   <h2>Our Work</h2>
   <ul class="work">
     <li>
       <a href="#">
-        <img src="img/work.png"/><br/>
+        <img src="{{ STATIC_URL }}img/work.png"/><br/>
         <span>lorem ipsum dolor sit amet</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <img src="img/work.png"/><br/>
+        <img src="{{ STATIC_URL }}img/work.png"/><br/>
         <span>lorem ipsum dolor sit amet</span>
       </a>
     </li>
     <li>
       <a href="#">
-        <img src="img/work.png"/><br/>
+        <img src="{{ STATIC_URL }}img/work.png"/><br/>
         <span>lorem ipsum dolor sit amet</span>
       </a>
     </li>
   </ul>
 </section>
+-->
 {% endblock %}

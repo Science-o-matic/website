@@ -16,12 +16,24 @@
 
   {% addtoblock "css" %}
    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/reseter.css" />
+   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.bxslider.css" />
    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" />
   {% endaddtoblock %}
-  <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
   {% addtoblock "js" %}
-  <script src="{{ STATIC_URL }}js/vendor/jquery-1.9.0.min.js"></script>
-  <script src="{{ STATIC_URL }}js/main.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.bxslider.min.js"></script>
+  <script src="{{ STATIC_URL }}js/action.js"></script>
+  <script type="text/javascript">
+    $(window).ready(function(){
+    $('.bxslider').bxSlider({
+    adaptiveHeight: true,
+                    auto: true,
+    autoStart: true,
+    pause: 5000
+    })
+            });
+  </script>
+
   {% endaddtoblock %}
 </head>
 
@@ -46,8 +58,8 @@
   </nav>
   <nav id="menu-mobile">
     <div id="navMobile">
-      <a href="#" class="logo"><img src="{{ STATIC_URL }}gimg/logo.png"/></a>
-      <button id="mobile-menu-button"><img src="{{ STATIC_URL }}jimg/mobile-menu_icon.png" /></a>
+      <a href="#" class="logo"><img src="{{ STATIC_URL }}img/logo.png"/></a>
+      <button id="mobile-menu-button"><img src="{{ STATIC_URL }}img/mobile-menu_icon.png" /></a>
     </div>
     <ul>
       <a href="#"><li>HOME</li></a>
@@ -89,9 +101,8 @@
     </section>
   </div>
 </footer>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+var _gaq=[['_setAccount','UA-39109692-2'],['_trackPageview']];
 (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 s.parentNode.insertBefore(g,s)}(document,'script'));
