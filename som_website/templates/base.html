@@ -1,5 +1,4 @@
-{% load cms_tags menu_tags sekizai_tags %}
-
+{% load sekizai_tags staticfiles %}
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -15,14 +14,15 @@
   {% render_block "css" %}
 
   {% addtoblock "css" %}
-   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/reseter.css" />
-   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.bxslider.css" />
-   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/styles.css" />
+   <link rel="stylesheet" type="text/css" href="{% static "css/reseter.css" %}" />
+   <link rel="stylesheet" type="text/css" href="{% static "css/jquery.bxslider.css" %}" />
+   <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}" />
   {% endaddtoblock %}
+
   {% addtoblock "js" %}
-  <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
-  <script src="{{ STATIC_URL }}js/jquery.bxslider.min.js"></script>
-  <script src="{{ STATIC_URL }}js/action.js"></script>
+  <script src="{% static "js/jquery-2.0.3.min.js" %}"></script>
+  <script src="{% static "js/jquery.bxslider.min.js" %}"></script>
+  <script src="{% static "js/action.js" %}"></script>
   <script type="text/javascript">
     $(window).ready(function(){
     $('.bxslider').bxSlider({
@@ -33,50 +33,45 @@
     })
             });
   </script>
-
   {% endaddtoblock %}
 </head>
 
 <body class="home">
   <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <![endif]-->
-
-{% cms_toolbar %}
-<header>
-  <nav id="desktop">
-    <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">ABOUT US</a></li>
-      <li><a href="#" class="logo"><img src="{{ STATIC_URL }}img/logo.png"/></a></li>
-      <li><a href="#">PROJECTS</a></li>
-      <li><a href="#">CONTACT US</a></li>
-    </ul>
-    <div id="languages">
-      <a class="selected">EN</a> / <a href="#">ES</a>
-    </div>
-  </nav>
-  <nav id="menu-mobile">
-    <div id="navMobile">
-      <a href="#" class="logo"><img src="{{ STATIC_URL }}img/logo.png"/></a>
-      <button id="mobile-menu-button"><img src="{{ STATIC_URL }}img/mobile-menu_icon.png" /></a>
-    </div>
-    <ul>
-      <a href="#"><li>HOME</li></a>
-      <a href="#"><li>ABOUT US</li></a>
-      <a href="#"><li>PROJECTS</li></a>
-      <a href="#"><li>CONTACT US</li></a>
-    </ul>
-  </nav>
-</header>
+    <![endif]-->
+  <header>
+    <nav id="desktop">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">CONTACT US</a></li>
+      </ul>
+      <div id="languages">
+        <a class="selected">EN</a> / <a href="#">ES</a>
+      </div>
+    </nav>
+    <nav id="menu-mobile">
+      <div id="navMobile">
+        <a href="#" class="logo"><img src="{% static "img/logo.png" %}"/></a>
+        <button id="mobile-menu-button"><img src="{% static "img/mobile-menu_icon.png" %}"/>
+      </div>
+      <ul>
+        <a href="#"><li>HOME</li></a>
+        <a href="#"><li>ABOUT US</li></a>
+          <a href="#"><li>PROJECTS</li></a>
+          <a href="#"><li>CONTACT US</li></a>
+      </ul>
+    </nav>
+  </header>
 {% block base_content %}
 {% endblock %}
-
-{% render_block "js" %}
 <footer>
   <div class="navigation">
     <section>
-      <div class="footerLogo"><img src="{{ STATIC_URL }}img/logoFooter.png"/></div>
+      <div class="footerLogo"><img src="{% static "img/logoFooter.png" %}"/></div>
       <nav>
         <ul>
           <li><a href="#">About Us</a></li>
@@ -101,6 +96,7 @@
     </section>
   </div>
 </footer>
+{% render_block "js" %}
 <script>
 var _gaq=[['_setAccount','UA-39109692-2'],['_trackPageview']];
 (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

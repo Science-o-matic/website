@@ -40,6 +40,10 @@ body {
     background: #fff;
 }
 
+body,home {
+    background-color: #02a7dd;
+}
+
 a {
     text-decoration: none;
     color: #0099cc;
@@ -289,7 +293,7 @@ ul.images li:last-child {
  ------------------------*/
 
 .home header nav {
-    border-bottom: 1px solid #88d5ee;    
+    border-bottom: 1px solid #88d5ee;
 }
 
 .home section.slides {
@@ -375,7 +379,7 @@ form textarea {
     border: #bbb 1px solid;
     box-shadow: inset 0 2px 3px #ddd;
     width: 100%;
-    min-height: 100px; 
+    min-height: 100px;
 }
 
 form div.block {
@@ -431,26 +435,26 @@ ul.work li a,visited {
 
 ul.work li:hover {
     background: #02a7dd;
-    -webkit-transition: background 0.5s ease-in;  
-    -moz-transition: background 0.5s ease-in;  
-    -o-transition: background 0.5s ease-in;  
-    transition: background 0.5s ease-in;  
+    -webkit-transition: background 0.5s ease-in;
+    -moz-transition: background 0.5s ease-in;
+    -o-transition: background 0.5s ease-in;
+    transition: background 0.5s ease-in;
 }
 
 ul.work li:hover a {
     color: #fff;
-    -webkit-transition: color 0.4s ease-in;  
-    -moz-transition: color 0.4s ease-in;  
-    -o-transition: color 0.4s ease-in;  
-    transition: color 0.4s ease-in;  
+    -webkit-transition: color 0.4s ease-in;
+    -moz-transition: color 0.4s ease-in;
+    -o-transition: color 0.4s ease-in;
+    transition: color 0.4s ease-in;
 }
 
 ul.work li:hover img {
     opacity: 0.8;
-    -webkit-transition: opacity 0.5s ease-in;  
-    -moz-transition: opacity 0.5s ease-in;  
-    -o-transition: opacity 0.5s ease-in;  
-    transition: opacity 0.5s ease-in;  
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
 }
 
 
@@ -518,10 +522,10 @@ article.content {
 .project div.linkToProject:hover {
     opacity: 1;
     -moz-opacity: 1;
-    -webkit-transition: opacity 0.5s ease-in-out;  
-    -moz-transition: opacity 0.5s ease-in-out;  
-    -o-transition: opacity 0.5s ease-in-out;  
-    transition: opacity 0.5s ease-in-out;  
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 
 }
 
@@ -603,7 +607,7 @@ footer div.navigation section nav ul li a:hover {
     footer div.navigation section {
         width: 100%;
     }
-    
+
     footer div.navigation section nav ul li {
         padding: 0 10px;
     }
@@ -737,24 +741,24 @@ a.button.rss:hover {
 
 @media (max-width: 949px)
 and (min-width: 481px) {
-    
+
     h1 {
         font-size: 44px;
     }
-    
+
     section {
         width: 100%;
         min-height: 0;
     }
-    
-    section article {            
+
+    section article {
         padding: 0 15px;
     }
 
     section article h1 {
         margin-bottom: 20px;
     }
-    
+
     section article h3 {
         font-size: 24px;
         line-height: 28px;
@@ -765,7 +769,7 @@ and (min-width: 481px) {
         font-size: 20px;
         text-align: center;
     }
-    
+
     section article p {
         font-size: 15px;
         line-height: 24px;
@@ -773,7 +777,7 @@ and (min-width: 481px) {
         text-align: justify;
         text-justify: newspaper;
     }
-    
+
     ul.images li:first-child,
     ul.images li:last-child{
         margin-left: 10px;
@@ -786,18 +790,18 @@ and (min-width: 481px) {
     .project div.linkToProject {
         margin-top: 165px;
     }
-    
+
     .project div.linkToProject h5,
     .project div.linkToProject h6
     {
         background: #fff;
     }
-    
+
     .project aside {
         float: none;
         display: block;
         column-count: 2;
-        -webkit-column-count: 2; 
+        -webkit-column-count: 2;
         -moz-column-count: 2;
         column-gap: 15px;
         -webkit-column-gap: 15px;
@@ -811,39 +815,39 @@ and (min-width: 481px) {
         width: 100%;
         height: auto;
     }
-    
+
     .project aside p {
         line-height: 18px;
         margin-bottom: 3px;
     }
-    
+
     .project section.content {
         margin-top: 0;
     }
-    
+
     .work section, .home section.work,
     .contact section {
         width: 100%;
     }
-    
+
     .contact section {
-        
+
     }
-    
+
     .home section.work {
         margin-bottom: 40px;
         height: auto;
     }
-    
+
     .home p {
-        
+
     }
-    
+
 }
 
 @media (max-width: 768px)
 and (min-width: 481px) {
-    
+
 }
 
 
@@ -855,17 +859,17 @@ and (min-width: 481px) {
         margin: 0;
         border-radius: 0;
     }
-    
+
     ul.work li img {
         width: 75%;
     }
-    
+
     form div.block {
         display: inline;
         margin: 12px 0;
         float: left;
     }
-    
+
     form div.block.right,
     form div.block.left,
     form div.block.wide {
@@ -873,7 +877,7 @@ and (min-width: 481px) {
         margin-left: 0;
         margin-right: 0;
     }
-    
+
 }
 
 @media (max-width: 480px) {
@@ -882,18 +886,18 @@ and (min-width: 481px) {
         width: 100%;
         min-height: 0;
     }
-    
+
     footer div.navigation section nav ul li {
         padding: 0 6px;
         font-size: 12px;
     }
-        
+
     footer div.navigation {
         background: #222;
         height: 95px;
         width: 100%;
     }
-    
+
     footer div.navigation section nav {
         margin-top: 3px;
     }
@@ -901,28 +905,28 @@ and (min-width: 481px) {
     section article p {
         line-height: 23px;
     }
-    
+
     h1 {
         font-size: 43px;
         margin: 24px 0 10px;
     }
-    
+
     h3 {
         font-size: 23px;
         text-align: center;
         margin: 24px 0 10px;
     }
-    
+
     h4 {
         text-align: center;
         font-size: 17px;
         margin: 24px 0 8px;
     }
-    
+
     section article {
         margin: 0 20px;
     }
-    
+
     ul.images li:first-child,
     ul.images li:last-child{
         margin-left: 10px;
@@ -942,22 +946,22 @@ and (min-width: 481px) {
         margin-left: 0;
         margin-right: 0;
     }
-    
+
     .project div.linkToProject h5,
     .project div.linkToProject h6 {
         display: none;
     }
-    
+
     .project div.linkToProject {
         width: 57px;
         height: 68px;
         margin-top: 170px;
     }
-    
+
     .project div.linkToProject.previous {
         background: url(../img/nextProject.png) no-repeat -34px -17px;
     }
-    
+
     .project div.linkToProject.next {
         background: url(../img/nextProject.png) no-repeat -123px -17px;
     }
@@ -971,24 +975,24 @@ and (min-width: 481px) {
         width: auto;
         height: auto;
     }
-    
+
     .project aside p {
         line-height: 22px;
         text-align: center;
         font-size: 15px;
         margin-bottom: 6px;
     }
-    
+
     .project aside hr {
         display: none;
     }
-    
+
     .addthis_toolbox {
         text-align: center;
         margin: 15px auto 15px;
         width: 180px;
     }
-    
+
     section article.content {
         padding: 0 20px;
 
@@ -1006,6 +1010,6 @@ and (min-width: 481px) {
         height: auto;
         width: 100%;
     }
-    
-    
+
+
 }

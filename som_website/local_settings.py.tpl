@@ -1,8 +1,6 @@
 # Django settings for jellyrisk project.
 import os
 
-DEBUG = True
-
 # Configure your local DB here
 #
 # DATABASES = {
