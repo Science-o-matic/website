@@ -43,11 +43,12 @@
   <header>
     <nav id="desktop">
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">CONTACT US</a></li>
+        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="/" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
+        {% comment %}
+        <li><a href="/projects">PROJECTS</a></li>
+        {% endcomment %}
+        <li><a href="{% url "contact-page" %}">CONTACT US</a></li>
       </ul>
       <div id="languages">
         <a class="selected">EN</a> / <a href="#">ES</a>
@@ -69,20 +70,22 @@
 {% block base_content %}
 {% endblock %}
 <footer>
+  {% comment %}
   <div class="navigation">
     <section>
       <div class="footerLogo"><img src="{% static "img/logoFooter.png" %}"/></div>
-      <nav>
+        <nav>
         <ul>
-          <li><a href="#">About Us</a></li>
+          <li><a href="/about">About Us</a></li>
           <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="#">Terms & Conditions</a></li>ç
           <li><a href="#">Sitemap</a></li>
         </ul>
       </nav>
     </section>
   </div>
+  {% endcomment %}
   <div class="socialNetworks">
     <section>
       <span>Follow us on:</span>
@@ -90,8 +93,10 @@
         <li><a href="#" class="button facebook"></a></li>
         <li><a href="#" class="button twitter"></a></li>
         <li><a href="#" class="button linkedin"></a></li>
+        {% comment %}
         <li><a href="#" class="button google"></a></li>
         <li><a href="#" class="button rss"></a></li>
+        {% endcomment %}
       </ul>
     </section>
   </div>

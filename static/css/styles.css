@@ -40,10 +40,6 @@ body {
     background: #fff;
 }
 
-body,home {
-    background-color: #02a7dd;
-}
-
 a {
     text-decoration: none;
     color: #0099cc;
@@ -553,6 +549,8 @@ article.content {
 footer {
     color: #fff;
     font-family: 'SohoRegular';
+    /* ugly quick fix, repair me */
+    margin-top: -16px;
 }
 
 footer div.navigation {

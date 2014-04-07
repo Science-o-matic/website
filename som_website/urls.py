@@ -5,5 +5,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                        (r'^$', TemplateView.as_view(template_name='home.html')),
+                       url(r'^contact/$',
+                           TemplateView.as_view(template_name='contact.html'),
+                           name='contact-page'),
                        url(r'^admin/', include(admin.site.urls)),
 )

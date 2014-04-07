@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% load sekizai_tags %}
+
+{% block base_content %}
+<section>
+  <article>
+    <h1>Contact Us</h1>
+    <p></p>
+    <form method="post" name="deliveryform" id="deliveryform" action="mailto:info@science-o-matic.com" enctype="text/plain" >
+      <div class="block left">
+        <label for="email">E-mail</label>
+        <br/>
+        <input type="text" name="email" title="email"/>
+      </div>
+      <div class="block right">
+        <label for="Name">Name</label>
+        <br/>
+        <input type="text" name="name" title="name"/>
+      </div>
+
+      <div class="wide">
+        <label for="address">Address</label>
+        <br/>
+        <input type="text" name="address" title="address"/>
+      </div>
+
+      <div class="block left">
+        <label for="contact_reason">Contact Reason</label>
+        <br/>
+        <select name="contact_reason" title="contact_reason">
+          <option>Job Contact</option>
+          <option>Technical Support</option>
+        </select>
+      </div>
+      <div class="block right">
+        <label for="business_type">Business Type</label>
+        <br/>
+        <select name="business_type" title="business_type">
+          <option>Communication - Entertainment</option>
+          <option>Customer service</option>
+        </select>
+      </div>
+
+      <div class="block left">
+        <label for="sex">Sex</label>
+        <br/>
+        <input type="radio" name="sex" value="male">Male<br>
+        <input type="radio" name="sex" value="female">Female
+      </div>
+      <div class="block right">
+        <label for="find_us">How did you find us?</label>
+        <br/>
+        <input type="checkbox" name="find_us" value="google">Google<br/>
+        <input type="checkbox" name="find_us" value="tv_ads">TV ads<br/>
+        <input type="checkbox" name="find_us" value="friend">Friend (recommendation)<br/>
+      </div>
+
+      <div class="wide">
+        <label for="comments">Comments</label>
+        <textarea class="comments" name="comments" title="comments">
+
+        </textarea>
+      </div>
+
+      <input type="checkbox"/>
+      <span>He leído y acepto la <a href="#">Política de Privacidad</a> y los <a href="#">Términos y Condiciones</a></span>
+      <br/>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </article>
+</section>
+{% endblock %}
