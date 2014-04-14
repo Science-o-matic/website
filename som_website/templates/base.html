@@ -1,4 +1,4 @@
-{% load sekizai_tags staticfiles %}
+{% load sekizai_tags staticfiles i18n %}
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="img/favicon.png" />
-  <title>{{ request.current_page.get_title }}</title>
+  <title>{% block title %}{% endblock %}</title>
 
   {% render_block "css" %}
 
@@ -27,11 +27,11 @@
     $(window).ready(function(){
     $('.bxslider').bxSlider({
     adaptiveHeight: true,
-                    auto: true,
+    auto: true,
     autoStart: true,
     pause: 5000
     })
-            });
+    });
   </script>
   {% endaddtoblock %}
 </head>
@@ -43,15 +43,12 @@
   <header>
     <nav id="desktop">
       <ul>
-        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="{%  url "about-page" %}">{% trans "ABOUT US" %}</a></li>
         <li><a href="/" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
-        {% comment %}
-        <li><a href="/projects">PROJECTS</a></li>
-        {% endcomment %}
-        <li><a href="{% url "contact-page" %}">CONTACT US</a></li>
+        <li><a href="{% url "contact-page" %}">{% trans "CONTACT US" %}</a></li>
       </ul>
       <div id="languages">
-        <a class="selected">EN</a> / <a href="#">ES</a>
+        <a class="selected">EN</a> / <a href="/">ES</a>
       </div>
     </nav>
     <nav id="menu-mobile">
@@ -60,10 +57,9 @@
         <button id="mobile-menu-button"><img src="{% static "img/mobile-menu_icon.png" %}"/>
       </div>
       <ul>
-        <a href="#"><li>HOME</li></a>
-        <a href="#"><li>ABOUT US</li></a>
-          <a href="#"><li>PROJECTS</li></a>
-          <a href="#"><li>CONTACT US</li></a>
+        <a href="/"><li>HOME</li></a>
+        <a href="{% url "about-page" %}"><li>{% trans "ABOUT US" %}</li></a>
+        <a href="{% url "contact-page" %}"><li>{% trans "CONTACT US" %}</li></a>
       </ul>
     </nav>
   </header>
@@ -88,7 +84,7 @@
   {% endcomment %}
   <div class="socialNetworks">
     <section>
-      <span>Follow us on:</span>
+      <span>{% trans "Follow us on:" %}</span>
       <ul>
         <li><a href="https://twitter.com/ScienceOMatic" class="button twitter"></a></li>
         <li><a href="http://es.linkedin.com/company/science-o%27-matic-sl" class="button linkedin"></a></li>
