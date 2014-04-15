@@ -1,26 +1,59 @@
 {% extends "base.html" %}
 
-{% load sekizai_tags i18n %}
+{% load sekizai_tags i18n staticfiles %}
 
 {% block base_content %}
+
+{% addtoblock "css" %}
+   <link rel="stylesheet" type="text/css" href="{% static "css/about.css" %}" />
+{% endaddtoblock %}
+
 <section>
+  <h1>{% trans "About Us" %}</h1>
   <article>
-    <h1>{% trans "About Us" %}</h1>
     <h3>{% trans "Who we are" %}</h3>
-    <p>{% trans "In short: a bunch of restless technology enthusiasts." %}</p>
-    <h4>{% trans "Team" %}</h4>
-    <ul class="images">
-      <li><img src="img/photo-img.png"/></li>
-      <li><img src="img/photo-img.png"/></li>
-      <li><img src="img/photo-img.png"/></li>
-      <li><img src="img/photo-img.png"/></li>
+    <p>{% trans "A mixed team of technology enthusiasts with experience in software development, integration & support, and custom machinery design." %}
+    </p>
+    <ul class="team_members">
+      <li>
+        <img src="{% static "img/photo-img.png" %}"/>
+        <div class="team_member">
+          <p><em>Martín Fuentes</em></p>
+          <p><span class="role">{% trans "Founder / CEO" %}</span></p>
+        </div>
+      </li>
+      <li>
+        <img src="{% static "img/photo-img.png" %}"/>
+        <div class="team_member">
+          <p><em>Alejandro Olariaga</em></p>
+          <p><span class="role">{% trans "CTO" %}</span></p>
+        </div>
+      </li>
+      <li>
+        <img src="{% static "img/photo-img.png" %}"/>
+        <div class="team_member">
+          <p><em>Javier Fuentes</em></p>
+          <p><span class="role">{% trans "COO" %}</span></p>
+        </div>
+      </li>
+      <li>
+        <img src="{% static "img/photo-img.png" %}"/>
+        <div class="team_member">
+          <p><em>Antonio Barcia</em></p>
+          <p><span class="role">{% trans "Technical Advisor" %}</span></p>
+        </div>
+      </li>
     </ul>
+  </article>
+  <article>
     <h3>What we do</h3>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p> 
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
     <p>Proint ut nibh velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
       Phasellus consequat molestie orci.</p>
     <h3>Why we do it</h3>
-    
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    <p>Proint ut nibh velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      Phasellus consequat molestie orci.</p>
   </article>
 </section>
 {% endblock %}

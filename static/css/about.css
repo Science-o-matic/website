@@ -1,0 +1,29 @@
+article  {
+    clear: both;
+}
+
+ul.team_members {
+    margin-top: 1.5ex;
+    float: left;
+}
+   ul.team_members li {
+       clear: both;
+       float: left;
+       margin-bottom: 2ex;
+       widht: 100%;
+   }
+
+   ul.team_members img {
+       float: left;
+   }
+
+   ul.team_members div.team_member {
+       float: left;
+       margin-top: .5ex;
+       margin-left: 1.5em;
+   }
+
+   ul.team_members div.team_member em {
+       font-weight: bold;
+       color: #333;
+   }
