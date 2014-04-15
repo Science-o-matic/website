@@ -12,9 +12,9 @@
   <h1>{% trans "About Us" %}</h1>
   <article>
     <h3>{% trans "Who we are" %}</h3>
-    <p>{% trans "A mixed team of technology enthusiasts with experience in software development, integration & support, and custom machinery design." %}
+    <p>{% trans "A mixed team of technology enthusiasts with experience in software development (python/Django specialists), integration & support, and custom machinery design." %}
     </p>
-    <ul class="team_members">
+    <ul id="team_members">
       <li>
         <img src="{% static "img/photo-img.png" %}"/>
         <div class="team_member">
@@ -47,13 +47,17 @@
   </article>
   <article>
     <h3>What we do</h3>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-    <p>Proint ut nibh velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      Phasellus consequat molestie orci.</p>
+    <p>{% trans "We develop customized software and hardware solutions for scientific and R&D groups, enterprises or particulars. Also, we design machinery to solve specific needs, specialized in sea devices." %}</p>
+    <p>{% trans "We've been doing: " %}
+    <ul id="projects">
+      <li><p>{% trans "CMS-powered websites developed using python/Django." %}</p></li>
+      <li><p>{% trans "An API and an administration site for jellyfishes' sigthings reporting, validation and sharing." %}</p></li>
+      <li><p>{% trans "An Arduino-based pot watering system." %}</p></li>
+      </ul>
+  </article>
+  <article>
     <h3>Why we do it</h3>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-    <p>Proint ut nibh velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      Phasellus consequat molestie orci.</p>
+    <p>{% trans "Because we are technology geeks with great interest in science-related projects. and we'd like to give technical support and solutions for them, among others collaborations where our expertise can be useful." %}<p>
   </article>
 </section>
 {% endblock %}
