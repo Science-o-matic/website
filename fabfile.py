@@ -27,26 +27,26 @@ def git_status():
 
 
 @roles('%s' % PROJECT_USER)
-def pull():
+def _git_update(branch):
     with settings(user=PROJECT_USER):
         with cd(env['project_path']):
-            run('git pull')
-
+            run('git fetch --all')
+            run('git checkout %s' % branch)
+            run('git reset --hard origin/%s' % branch)
 
 @roles('sudoer')
 def reloadapp():
     sudo('supervisorctl restart %s' % env.project_name, shell=False)
-    sudo('service nginx reload', shell=False)
-
 
 @roles('%s' % PROJECT_USER)
-def release(run_migrate=True, static=True):
-    pull()
+def release(run_migrate=True, static=True, branch='master'):
+    _git_update(branch)
     run('%s install -r %spip-requirements.txt' %
         (env['pip_path'], env['project_path']))
     with cd(env['project_path']):
         if run_migrate:
             migrate()
+        _run_manage('compilemessages')
         if static:
             _run_manage('collectstatic --noinput')
     reloadapp()
