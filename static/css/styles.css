@@ -216,11 +216,13 @@ header nav div#languages {
     font-size: 11px;
     font-weight: normal;
     letter-spacing: -0.1em;
-    margin: -66px 144px;
+    margin: -66px 104px;
 }
 
 header nav div#languages a {
     color: #94d1e5;
+    margin-left: 1ex;
+    margin-right: 1ex;
 }
 
 header nav div#languages a:hover {

@@ -5,13 +5,14 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    (r'^$', 
+    (r'^$',
      TemplateView.as_view(template_name='home.html')),
-    url(r'^contact/$', 
+    url(r'^contact/$',
         TemplateView.as_view(template_name='contact.html'),
         name='contact-page'),
-    url(r'^about/$', 
+    url(r'^about/$',
         TemplateView.as_view(template_name='about.html'),
         name='about-page'),
+    (r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', include(admin.site.urls)),
 )

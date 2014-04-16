@@ -47,9 +47,24 @@
         <li><a href="/" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
         <li><a href="{% url "contact-page" %}">{% trans "CONTACT US" %}</a></li>
       </ul>
+      {% comment %}
+      TODO: Fix the language chooser style
       <div id="languages">
-        <a class="selected">EN</a> / <a href="/">ES</a>
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input name="next" type="hidden" value="{{ redirect_to }}" />
+          <select name="language">
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+              {{ language.name_local }} ({{ language.code }})
+            </option>
+            {% endfor %}
+          </select>
+          <input type="submit" value="Go" />
+        </form>
       </div>
+      {% endcomment %}
     </nav>
     <nav id="menu-mobile">
       <div id="navMobile">
