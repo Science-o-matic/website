@@ -72,7 +72,7 @@
         <button id="mobile-menu-button"><img src="{% static "img/mobile-menu_icon.png" %}"/>
       </div>
       <ul>
-        <a href="/"><li>HOME</li></a>
+        <a href="/"><li>{% trans "HOME" %}</li></a>
         <a href="{% url "about-page" %}"><li>{% trans "ABOUT US" %}</li></a>
         <a href="{% url "contact_form" %}"><li>{% trans "CONTACT US" %}</li></a>
       </ul>
@@ -86,14 +86,14 @@
     <section>
       <div class="footerLogo"><img src="{% static "img/logoFooter.png" %}"/></div>
         <nav>
-        <ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="#">Terms & Conditions</a></li>ç
-          <li><a href="#">Sitemap</a></li>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="#">Terms & Conditions</a></li>ç
+            <li><a href="#">Sitemap</a></li>
         </ul>
-      </nav>
+        </nav>
     </section>
   </div>
   {% endcomment %}
