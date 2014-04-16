@@ -7,3 +7,4 @@ ipython
 fabric
 gunicorn==0.17.2
 django-sekizai
+django-contact-form

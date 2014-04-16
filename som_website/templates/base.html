@@ -45,7 +45,7 @@
       <ul>
         <li><a href="{%  url "about-page" %}">{% trans "ABOUT US" %}</a></li>
         <li><a href="/" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
-        <li><a href="{% url "contact-page" %}">{% trans "CONTACT US" %}</a></li>
+        <li><a href="{% url "contact_form" %}">{% trans "CONTACT US" %}</a></li>
       </ul>
       {% comment %}
       TODO: Fix the language chooser style
@@ -74,7 +74,7 @@
       <ul>
         <a href="/"><li>HOME</li></a>
         <a href="{% url "about-page" %}"><li>{% trans "ABOUT US" %}</li></a>
-        <a href="{% url "contact-page" %}"><li>{% trans "CONTACT US" %}</li></a>
+        <a href="{% url "contact_form" %}"><li>{% trans "CONTACT US" %}</li></a>
       </ul>
     </nav>
   </header>

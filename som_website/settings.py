@@ -3,12 +3,18 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+ADMINS = (
+    ('Martín Fuentes', 'fuentesmartin@gmail.com'),
+    ('Antonio Barcia', 'antonio.barcia@gmail.com')
+)
+
+MANAGERS = ADMINS
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'y*^adf6xuae7yggqb5c%u++qlr+=^zotd%8rqv*c!@d4a-0pzq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
@@ -58,10 +64,8 @@ ROOT_URLCONF = 'som_website.urls'
 
 WSGI_APPLICATION = 'som_website.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -71,7 +75,6 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
-
 LANGUAGE_CODE = 'es'
 
 LANGUAGES = (
@@ -88,8 +91,6 @@ USE_TZ = True
 
 TIME_ZONE = 'Europe/Madrid'
 
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_URL = '/static/'
@@ -100,6 +101,9 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGGING = {
     'version': 1,
