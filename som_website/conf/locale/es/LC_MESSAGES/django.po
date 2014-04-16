@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-16 16:36+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/about.html:12
+msgid "About Us"
+msgstr ""
+
+#: templates/about.html:14
+msgid "Who we are"
+msgstr ""
+
+#: templates/about.html:15
+msgid ""
+"A mixed team of technology enthusiasts with experience in software "
+"development (we are python/Django specialists), integration & support, and "
+"custom machinery design."
+msgstr ""
+
+#: templates/about.html:23
+msgid "Founder / CEO"
+msgstr ""
+
+#: templates/about.html:32
+msgid "CTO"
+msgstr ""
+
+#: templates/about.html:41
+msgid "COO"
+msgstr ""
+
+#: templates/about.html:50
+msgid "Technical Advisor"
+msgstr ""
+
+#: templates/about.html:58
+msgid ""
+"We develop customized software and hardware solutions for scientific and R&D "
+"groups, enterprises or particulars. Also, we design machinery to solve "
+"specific needs, specialized in sea devices."
+msgstr ""
+
+#: templates/about.html:59
+msgid "We've been doing: "
+msgstr ""
+
+#: templates/about.html:61
+msgid "CMS-powered websites developed using python/Django."
+msgstr ""
+
+#: templates/about.html:62
+msgid ""
+"An API and an administration site for jellyfishes' sigthings reporting, "
+"validation and sharing."
+msgstr ""
+
+#: templates/about.html:63
+msgid "An Arduino-based pot watering system."
+msgstr ""
+
+#: templates/about.html:68
+msgid ""
+"Because we are technology geeks with great interest in science-related "
+"projects. We love to give technical support and solutions for them, among "
+"others collaborations where our expertise can be useful."
+msgstr ""
+
+#: templates/base.html:46 templates/base.html.py:61
+msgid "ABOUT US"
+msgstr ""
+
+#: templates/base.html:48 templates/base.html.py:62
+msgid "CONTACT US"
+msgstr ""
