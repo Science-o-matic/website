@@ -12,8 +12,11 @@
   <h1>{% trans "About Us" %}</h1>
   <article>
     <h3>{% trans "Who we are" %}</h3>
-    <p>{% trans "A mixed team of technology enthusiasts with experience in software development (we are python/Django specialists), integration & support, and custom machinery design." %}
+    <p>{% trans "A mixed team of technology enthusiasts with experience in software development, integration & support, and custom machinery design." %}
     </p>
+    <p>{% trans "We have been developing python/Django web sites, web applications and web services for quite a while. As well as designing and builiding robotics devices and Arduino systems." %}
+    </p>
+    <h4>{% trans "Team" %}</h4>
     <ul id="team_members">
       <li>
         <img src="{% static "img/photo-img.png" %}"/>
@@ -54,7 +57,7 @@
     </ul>
   </article>
   <article>
-    <h3>What we do</h3>
+    <h3>{% trans "What we do" %}</h3>
     <p>{% trans "We develop customized software and hardware solutions for scientific and R&D groups, enterprises or particulars. Also, we design machinery to solve specific needs, specialized in sea devices." %}</p>
     <p>{% trans "We've been doing: " %}
     <ul id="projects">
@@ -64,8 +67,8 @@
       </ul>
   </article>
   <article>
-    <h3>Why we do it</h3>
-    <p>{% trans "Because we are technology geeks with great interest in science-related projects. We love to give technical support and solutions for them, among others collaborations where our expertise can be useful." %}<p>
+    <h3>{% trans "Why we do it" %}</h3>
+    <p>{% trans "Because we are technology geeks with great interest in science-related projects. We love to give technical support and solutions for them. And for anyone who can find our expertise useful!" %}<p>
   </article>
 </section>
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-16 16:36+0200\n"
+"POT-Creation-Date: 2014-04-16 16:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,56 +28,74 @@ msgstr ""
 #: templates/about.html:15
 msgid ""
 "A mixed team of technology enthusiasts with experience in software "
-"development (we are python/Django specialists), integration & support, and "
-"custom machinery design."
+"development, integration & support, and custom machinery design."
 msgstr ""
 
-#: templates/about.html:23
+#: templates/about.html:17
+msgid ""
+"We have been developing python/Django web sites, web applications and web "
+"services for quite a while. As well as designing and builiding robotics "
+"devices and Arduino systems."
+msgstr ""
+
+#: templates/about.html:19
+msgid "Team"
+msgstr ""
+
+#: templates/about.html:26
 msgid "Founder / CEO"
 msgstr ""
 
-#: templates/about.html:32
+#: templates/about.html:35
 msgid "CTO"
 msgstr ""
 
-#: templates/about.html:41
+#: templates/about.html:44
 msgid "COO"
 msgstr ""
 
-#: templates/about.html:50
+#: templates/about.html:53
 msgid "Technical Advisor"
 msgstr ""
 
-#: templates/about.html:58
+#: templates/about.html:60
+msgid "What we do"
+msgstr ""
+
+#: templates/about.html:61
 msgid ""
 "We develop customized software and hardware solutions for scientific and R&D "
 "groups, enterprises or particulars. Also, we design machinery to solve "
 "specific needs, specialized in sea devices."
 msgstr ""
 
-#: templates/about.html:59
+#: templates/about.html:62
 msgid "We've been doing: "
 msgstr ""
 
-#: templates/about.html:61
+#: templates/about.html:64
 msgid "CMS-powered websites developed using python/Django."
 msgstr ""
 
-#: templates/about.html:62
+#: templates/about.html:65
 msgid ""
 "An API and an administration site for jellyfishes' sigthings reporting, "
 "validation and sharing."
 msgstr ""
 
-#: templates/about.html:63
+#: templates/about.html:66
 msgid "An Arduino-based pot watering system."
 msgstr ""
 
-#: templates/about.html:68
+#: templates/about.html:70
+msgid "Why we do it"
+msgstr ""
+
+#: templates/about.html:71
 msgid ""
 "Because we are technology geeks with great interest in science-related "
-"projects. We love to give technical support and solutions for them, among "
-"others collaborations where our expertise can be useful."
+"projects. We love to give technical support and solutions for them. And for "
+"anyone who can find our expertise useful!"
 msgstr ""
 
 #: templates/base.html:46 templates/base.html.py:61
