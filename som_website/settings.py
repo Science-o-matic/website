@@ -97,6 +97,8 @@ STATIC_URL = '/static/'
 
 LOGFILE = os.path.join(BASE_DIR, "logfile.log")
 
+DEFAULT_FROM_EMAIL = "info@science-o-matic.com"
+
 try:
     from local_settings import *
 except ImportError:
