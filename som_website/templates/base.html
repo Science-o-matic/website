@@ -43,7 +43,6 @@
   <header>
     <nav id="desktop">
       <ul>
-        <li><a href="{%  url "about-page" %}">{% trans "ABOUT US" %}</a></li>
         <li><a href="/" class="logo"><img src="{% static "img/logo.png" %}"/></a></li>
         <li><a href="{% url "contact_form" %}">{% trans "CONTACT US" %}</a></li>
       </ul>
@@ -73,7 +72,6 @@
       </div>
       <ul>
         <a href="/"><li>{% trans "HOME" %}</li></a>
-        <a href="{% url "about-page" %}"><li>{% trans "ABOUT US" %}</li></a>
         <a href="{% url "contact_form" %}"><li>{% trans "CONTACT US" %}</li></a>
       </ul>
     </nav>
@@ -87,7 +85,6 @@
       <div class="footerLogo"><img src="{% static "img/logoFooter.png" %}"/></div>
         <nav>
           <ul>
-            <li><a href="/about">About Us</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="#">Terms & Conditions</a></li>ç

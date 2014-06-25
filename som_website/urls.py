@@ -17,9 +17,9 @@ urlpatterns = patterns('',
                                template_name='contact_form/contact_form_sent.html'
                                ),
                            name='contact_form_sent'),
-                       url(r'^about/$',
-                           TemplateView.as_view(template_name='about.html'),
-                           name='about-page'),
+#                       url(r'^about/$',
+#                           TemplateView.as_view(template_name='about.html'),
+#                           name='about-page'),
                        (r'^i18n/', include('django.conf.urls.i18n')),
                        url(r'^admin/', include(admin.site.urls)),
 )
